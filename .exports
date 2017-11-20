@@ -1,0 +1,10 @@
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+#Postgres
+export PATH=/Applications/Postgres.app/Contents/Versions/9.5/bin/:$PATH
+
+export NVM_DIR="$HOME/.nvm"
+. "$(brew --prefix nvm)/nvm.sh"
+
+export PATH=$PATH:~/.chefdk/gem/ruby/2.3.0/bin

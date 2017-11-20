@@ -1,0 +1,102 @@
+"
+" :so % to refresh .vimrc after making changes
+" :PlugInstall to install new stuff
+" :PlugUpdate to update to latest versions
+"
+
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" Add plugins below
+
+" [1] File tree viewer
+Plugin 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
+" [2] Twig syntax
+Plugin 'lepture/vim-jinja'
+
+" [3] easily surround things... Nice intro video: https://www.youtube.com/watch?v=5HF4jSyPpvs
+Plugin 'tpope/vim-surround'
+
+" [4] Themes / Prettify stuff
+Plugin 'tpope/vim-fugitive'  
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'flazz/vim-colorschemes'
+
+" [5] search filesystem with ctrl+p (this fork replaces the old unmaintained project)
+Plugin 'ctrlpvim/ctrlp.vim'
+
+" [6]
+" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher (a lot
+" faster than grep)
+if executable('ag')
+  " Use Ag over Grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  let g:ctrlp_working_path_mode = 'r'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+
+  let g:ctrlp_extensions = ['line']
+endif
+
+" [7] Comment out code
+Plugin 'vim-scripts/tComment' "Comment easily with gcc
+
+" [8] Snippets
+Plugin 'ervandew/supertab'
+Plugin 'SirVer/ultisnips' 
+Plugin 'justinj/vim-react-snippets' 
+
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+"""" PLUGIN RELATED TWEAKS
+" [1]
+map <silent> <C-n> :NERDTreeToggle<cr>
+" Close vim if only NERDTree is open
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") &&
+" b:NERDTree.isTabTree()) | q | endif
+
+" [2]
+au BufNewFile,BufRead *.twig set ft=jinja "Syntax highlight twig files
+
+" [4] 
+colorscheme gobo                        
+" Override cursor bar color (light gray background)
+hi CursorLine cterm=NONE ctermbg=white 
+
+" [8]
+" Set ultisnips triggers
+let g:UltiSnipsSnippetsDir='~/.vim/ultisnips-snippets'   " Custom snippets dir
+let g:UltiSnipsSnippetDirectories=['ultisnips-snippets'] " Custom snippets dir
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsEditSplit="vertical"
