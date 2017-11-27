@@ -41,6 +41,11 @@ Icon
 *.un~
 .netrwhist
 Session.vim
+.vim/swaps/*
+.vim/backups/*
+.vim/bundle/*
+.vim/syntax/*
+.vim/.netrwhist
 
 
 # ----------------------------------------------------------------------

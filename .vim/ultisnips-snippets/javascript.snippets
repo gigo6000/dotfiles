@@ -1,0 +1,32 @@
+# Carlos Mafla - Custom Snippets for Javascript/JQuery
+#
+# General
+snippet con "console.log(...)" b
+console.log(${1:`!p snip.rv = re.sub(r';\s*$', '', snip.v.text)`});$0
+endsnippet
+
+
+# JQuery
+snippet click "On click event" b
+$('${1}').click(function(e){
+	${2}
+});$0
+endsnippet
+
+snippet this "this" b
+$(this)
+endsnippet
+
+snippet select "Selector" b
+$('${1}').$0
+endsnippet
+
+snippet func "Function" b
+/**
+* ${1}
+*/
+var ${2} = function() { 
+	$0
+}
+
+endsnippet
