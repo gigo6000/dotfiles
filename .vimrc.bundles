@@ -61,6 +61,8 @@ Plugin 'ervandew/supertab'
 Plugin 'SirVer/ultisnips' 
 Plugin 'justinj/vim-react-snippets' 
 
+" [9] Pretty format for our code
+Plugin 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -100,3 +102,9 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsEditSplit="vertical"
+
+" [9]
+" Enable vim-prettier to run in files without requiring the "@format" doc tag
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md Prettier
+
