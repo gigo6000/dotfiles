@@ -106,5 +106,6 @@ let g:UltiSnipsEditSplit="vertical"
 " [9]
 " Enable vim-prettier to run in files without requiring the "@format" doc tag
 let g:prettier#autoformat = 0
+let g:prettier#config#tab_width = 4
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md Prettier
 
