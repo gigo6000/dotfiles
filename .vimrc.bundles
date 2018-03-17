@@ -90,7 +90,7 @@ map <silent> <C-n> :NERDTreeToggle<cr>
 au BufNewFile,BufRead *.twig set ft=jinja "Syntax highlight twig files
 
 " [4] 
-colorscheme gobo                        
+silent! colorscheme gobo
 " Override cursor bar color (light gray background)
 hi CursorLine cterm=NONE ctermbg=white 
 
