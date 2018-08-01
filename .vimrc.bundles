@@ -1,7 +1,7 @@
 "
 " :so % to refresh .vimrc after making changes
-" :PlugInstall to install new stuff
-" :PlugUpdate to update to latest versions
+" :PluginInstall to install new stuff
+" :PluginUpdate to update to latest versions
 "
 
 set nocompatible              " be iMproved, required
@@ -32,6 +32,10 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'felixhummel/setcolors.vim'
+Plugin 'gko/vim-coloresque'
+Plugin 'hashivim/vim-vagrant'
+Plugin 'pangloss/vim-javascript'
 
 " [5] search filesystem with ctrl+p (this fork replaces the old unmaintained project)
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -90,9 +94,10 @@ map <silent> <C-n> :NERDTreeToggle<cr>
 au BufNewFile,BufRead *.twig set ft=jinja "Syntax highlight twig files
 
 " [4] 
-silent! colorscheme gobo
+silent! colorscheme blanco
+" set guifont=Menlo\ Regular:h16 
 " Override cursor bar color (light gray background)
-hi CursorLine cterm=NONE ctermbg=white 
+"hi CursorLine cterm=NONE ctermbg=white 
 
 " [8]
 " Set ultisnips triggers
