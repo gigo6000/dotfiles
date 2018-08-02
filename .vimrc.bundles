@@ -1,8 +1,14 @@
-"
+" 
 " :so % to refresh .vimrc after making changes
 " :PluginInstall to install new stuff
 " :PluginUpdate to update to latest versions
+" :PluginClean to remove deleted plugins
 "
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -66,7 +72,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'justinj/vim-react-snippets' 
 
 " [9] Pretty format for our code
-Plugin 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plugin 'gigo6000/vim-prettier'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
