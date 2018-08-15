@@ -72,3 +72,4 @@ hi cssClassName  guifg=#0a2775
 hi jsFuncParens guifg=#fd8900
 hi jsParens guifg=#fd8900
 hi jsArrowFuncArgs guifg=#642591
+hi jsObjectProp guifg=#3353aa
