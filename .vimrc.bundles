@@ -42,6 +42,7 @@ Plugin 'felixhummel/setcolors.vim'
 Plugin 'gko/vim-coloresque'
 Plugin 'hashivim/vim-vagrant'
 Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 
 " [5] search filesystem with ctrl+p (this fork replaces the old unmaintained project)
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -73,6 +74,9 @@ Plugin 'justinj/vim-react-snippets'
 
 " [9] Pretty format for our code
 Plugin 'gigo6000/vim-prettier'
+
+" [10] Linting
+Plugin 'w0rp/ale'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -118,5 +122,5 @@ let g:UltiSnipsEditSplit="vertical"
 " Enable vim-prettier to run in files without requiring the "@format" doc tag
 let g:prettier#autoformat = 0
 let g:prettier#config#tab_width = 4
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.php Prettier
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md Prettier
 
