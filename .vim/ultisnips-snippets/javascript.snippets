@@ -1,24 +1,14 @@
-# Carlos Mafla - Custom Snippets for Javascript/JQuery
+# Carlos Mafla - Custom Snippets for Javascript/JQuery/React
 #
+#**********************************************************************************************/
 # General
+#**********************************************************************************************/
 snippet con "console.log(...)" b
-console.log(${1:`!p snip.rv = re.sub(r';\s*$', '', snip.v.text)`});$0
+console.log('${1:`!p snip.rv = re.sub(r';\s*$', '', snip.v.text)`}');$0
 endsnippet
 
-
-# JQuery
-snippet click "On click event" b
-$('${1}').click(function(e){
-	${2}
-});$0
-endsnippet
-
-snippet this "this" b
-$(this)
-endsnippet
-
-snippet select "Selector" b
-$('${1}').$0
+snippet cons "console.log('var', var)" b
+console.log('${1:`!p snip.rv = re.sub(r';\s*$', '', snip.v.text)`}:', $1);$0
 endsnippet
 
 snippet func "Function" b
@@ -28,5 +18,51 @@ snippet func "Function" b
 var ${2} = function() { 
 	$0
 }
+endsnippet
 
+snippet import "Import module" b
+import ${1} from '${2}';
+endsnippet
+
+snippet importm "Import module" b
+import ${1} from './$1';
+endsnippet
+#**********************************************************************************************/
+# JQuery
+#**********************************************************************************************/
+snippet jclick "On click event" b
+$('${1}').click(function(e){
+	${2}
+});$0
+endsnippet
+
+snippet jthis "this" b
+$(this)
+endsnippet
+
+snippet jselect "Selector" b
+$('${1}').$0
+endsnippet
+
+#**********************************************************************************************/
+# React
+#**********************************************************************************************/
+# General
+snippet rdiv "Create new React div" b
+<div className="${1}">
+	$0
+</div>
+endsnippet
+
+# Hooks
+snippet rhook "Create new hook component" b
+import React, {useState, useEffect} from 'react';
+function ${1}() {
+	$0
+}
+export default $1;
+endsnippet
+
+snippet rstate "Create new state variable" b
+const [${1}, set${1/\w+\s*/\u$0/}] = useState($0);
 endsnippet

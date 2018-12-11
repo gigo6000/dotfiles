@@ -1,8 +1,53 @@
 # Carlos Mafla - Custom Snippets for PHP/HTML
 #
 # HTML
+snippet html5 "html5 basic template" b
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Your Website</title>
+</head>
+
+<body>
+</body>
+
+</html>
+endsnippet 
+
 snippet div "div tag" b
 <div class="${1}">
 	${2}
 </div>
+endsnippet
+
+snippet " "quotes for a word" b
+"${1}"
+endsnippet
+
+snippet func "Symfony Action function" b
+/**
+* @Route("/$1", name="$1")
+*/
+public function $1Action(Request $request)
+{
+	return $this->render('$1.html.twig', [
+]);
+}
+endsnippet
+
+
+#Yii2
+snippet yt "Yii translation function" i
+<?php echo Yii::t('app', '$1')?>
+endsnippet
+
+snippet yaction "Yii2 action" i
+/**
+ * $1
+ */
+public function $2Action($action)
+{
+	$3
+}
 endsnippet

@@ -1,0 +1,44 @@
+# Carlos Mafla - Custom Snippets for Ruby
+#
+# Chef
+snippet temp "Generate template resource block" b
+template '$1' do
+  source '$2.erb'
+  owner '$3'
+  group '$4'
+  mode '$5'
+end
+endsnippet
+
+snippet pack "Generate package resource block" b
+package '$1' do
+  action :install
+end
+endsnippet
+
+snippet file "Generate file resource block" b
+file '$1' do
+  content '$2'
+  owner '$3'
+  group '$4'
+  mode '$5'
+end
+endsnippet
+
+snippet remote "Generate remote_file resource block" b
+remote_file '$1' do
+  source '$2'
+  owner '$3'
+  group '$4'
+  mode '$5'
+end
+endsnippet
+
+snippet dir "Generate directory resource block" b
+directory '$1' do
+  owner '$2'
+  group '$3'
+  mode '$4'
+  recursive true
+end
+endsnippet
