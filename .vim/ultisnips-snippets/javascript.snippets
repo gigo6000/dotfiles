@@ -24,9 +24,14 @@ snippet import "Import module" b
 import ${1} from '${2}';
 endsnippet
 
-snippet importm "Import module" b
+snippet importp "Import package module" b
+import ${1} from '$1';
+endsnippet
+
+snippet importc "Import component module" b
 import ${1} from './$1';
 endsnippet
+
 #**********************************************************************************************/
 # JQuery
 #**********************************************************************************************/
@@ -57,12 +62,33 @@ endsnippet
 # Hooks
 snippet rhook "Create new hook component" b
 import React, {useState, useEffect} from 'react';
+
 function ${1}() {
 	$0
+
+	return ();
 }
+
 export default $1;
 endsnippet
 
 snippet rstate "Create new state variable" b
 const [${1}, set${1/\w+\s*/\u$0/}] = useState($0);
+endsnippet
+
+snippet rform "Create form tag" b
+<form onSubmit={${1:handleSubmit}}>
+	$0
+</form>
+endsnippet
+
+snippet rimg "Create image tag" b
+<img alt={${1}} src={${2}} />
+$0
+endsnippet
+
+snippet rt "Create tag" b
+<${1} className="${2}">
+	$0
+</$1>
 endsnippet

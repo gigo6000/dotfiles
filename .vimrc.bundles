@@ -78,6 +78,9 @@ Plugin 'gigo6000/vim-prettier'
 " [10] Linting
 Plugin 'w0rp/ale'
 
+" [11] Move code 
+Plugin 'tpope/vim-unimpaired'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -122,5 +125,16 @@ let g:UltiSnipsEditSplit="vertical"
 " Enable vim-prettier to run in files without requiring the "@format" doc tag
 let g:prettier#autoformat = 0
 let g:prettier#config#tab_width = 4
+"none" - No trailing commas.
+"es5" - Trailing commas where valid in ES5 (objects, arrays, etc.)
+"all" - Trailing commas wherever possible (including function arguments). This requires node 8 or a transform.
+let g:prettier#config#trailing_comma = 'es5'
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md Prettier
 
+" [11]
+" Move single lines
+nmap <C-k> [e
+nmap <C-j> ]e
+" Move multiple lines selected
+vmap <C-k> [egv
+vmap <C-j> ]egv
