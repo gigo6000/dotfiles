@@ -26,5 +26,5 @@ This are my dotfiles. I use mac and I mainly do PHP/Javascript development on Ma
 Run this command to set up VIM:
 
 ```
-vim-setup.sh
+./vim-setup.sh
 ```
