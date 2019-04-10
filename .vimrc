@@ -45,7 +45,7 @@ set cpoptions+=$               " When making a change, don't
                                " the changed text
 
 color desert
-set cursorline                 " Highlight the current line  
+set cursorline                 " Highlight the current line
 set directory=~/.vim/swaps     " Set directory for swap files
 set encoding=utf-8 nobomb      " Use UTF-8 without BOM
 set history=5000               " Increase command line history
@@ -144,3 +144,7 @@ function! <SID>SynStack()
   endif
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
+
+" Remove trailing spaces on save
+" https://makandracards.com/makandra/11541-how-to-not-leave-trailing-whitespace-using-your-editor-or-git
+autocmd BufWritePre * :%s/\s\+$//e
