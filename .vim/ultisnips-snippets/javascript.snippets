@@ -15,7 +15,7 @@ snippet func "Function" b
 /**
 * ${1}
 */
-var ${2} = function() { 
+var ${2} = function() {
 	$0
 }
 endsnippet
@@ -49,6 +49,14 @@ snippet jselect "Selector" b
 $('${1}').$0
 endsnippet
 
+#****HTML***#
+snippet h1 "h1 tag" b
+<h1>${1}</h1>
+endsnippet
+
+snippet h2 "h2 tag" b
+<h2>${1}</h2>
+endsnippet
 #**********************************************************************************************/
 # React
 #**********************************************************************************************/
@@ -60,8 +68,8 @@ snippet rdiv "Create new React div" b
 endsnippet
 
 # Hooks
-snippet rhook "Create new hook component" b
-import React, {useState, useEffect} from 'react';
+snippet rcomponent "Create new hook component" b
+import React, {useState} from 'react';
 
 function ${1}() {
 	$0

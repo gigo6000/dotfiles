@@ -1,4 +1,4 @@
-" 
+"
 " :so % to refresh .vimrc after making changes
 " :PluginInstall to install new stuff
 " :PluginUpdate to update to latest versions
@@ -34,7 +34,7 @@ Plugin 'lepture/vim-jinja'
 Plugin 'tpope/vim-surround'
 
 " [4] Themes / Prettify stuff
-Plugin 'tpope/vim-fugitive'  
+Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'flazz/vim-colorschemes'
@@ -69,17 +69,20 @@ Plugin 'vim-scripts/tComment' "Comment easily with gcc
 
 " [8] Snippets
 Plugin 'ervandew/supertab'
-Plugin 'SirVer/ultisnips' 
-Plugin 'justinj/vim-react-snippets' 
+Plugin 'SirVer/ultisnips'
+Plugin 'justinj/vim-react-snippets'
 
 " [9] Pretty format for our code
-Plugin 'gigo6000/vim-prettier'
+Plugin 'prettier/vim-prettier'
 
 " [10] Linting
 Plugin 'w0rp/ale'
 
-" [11] Move code 
+" [11] Move code
 Plugin 'tpope/vim-unimpaired'
+
+" [12] Auto close brackets, parenthesis, etc
+Plugin 'jiangmiao/auto-pairs'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -106,11 +109,11 @@ map <silent> <C-n> :NERDTreeToggle<cr>
 " [2]
 au BufNewFile,BufRead *.twig set ft=jinja "Syntax highlight twig files
 
-" [4] 
+" [4]
 silent! colorscheme blanco
-" set guifont=Menlo\ Regular:h16 
+" set guifont=Menlo\ Regular:h16
 " Override cursor bar color (light gray background)
-"hi CursorLine cterm=NONE ctermbg=white 
+"hi CursorLine cterm=NONE ctermbg=white
 
 " [8]
 " Set ultisnips triggers

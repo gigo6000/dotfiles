@@ -131,6 +131,10 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
+" Quicker tab movement
+nnoremap H gT                  " Move to the next tab with Shift + H
+nnoremap L gt                  " Move to the next tab with Shift + L
+
 " Load up all of our plugins
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
