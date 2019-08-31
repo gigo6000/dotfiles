@@ -20,6 +20,8 @@ This are my dotfiles. I use mac and I mainly do PHP/Javascript development on Ma
 -   Code formatting : Using Prettier to format code on saving.
 -   Syntax Highlighting : Nice syntax for React/Javascript, PHP and other languages.
 -   Color Schemes: Tons of color schemes provided by `flazz/vim-colorschemes`, also my custom theme called `blanco`.
+-   Fuzzy Search Files: Type partial filenames and/or paths to quickly find files in your project.
+-   File System Explorer: Browse and view the files and folders in your project.
 
 ## Install
 
@@ -28,3 +30,6 @@ Run this command to set up VIM:
 ```
 ./vim-setup.sh
 ```
+## Quick Commands
+-   `Ctrl + p` = To start fuzzy searching a file
+-   `Ctrl + n` = To open file system explorer
