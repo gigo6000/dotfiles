@@ -152,3 +152,10 @@ endfunc
 " Remove trailing spaces on save
 " https://makandracards.com/makandra/11541-how-to-not-leave-trailing-whitespace-using-your-editor-or-git
 autocmd BufWritePre * :%s/\s\+$//e
+" Python Setting {
+  set pythondll=/usr/local/Frameworks/Python.framework/Versions/3.7/Python
+  set pythonhome=/usr/local/Frameworks/Python.framework/Versions/3.7
+  set pythonthreedll=/usr/local/Frameworks/Python.framework/Versions/3.7/Python
+  set pythonthreehome=/usr/local/Frameworks/Python.framework/Versions/3.7
+" }
+"

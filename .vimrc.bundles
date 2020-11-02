@@ -16,6 +16,7 @@ filetype off                  " required
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
@@ -76,13 +77,16 @@ Plugin 'justinj/vim-react-snippets'
 Plugin 'prettier/vim-prettier'
 
 " [10] Linting
-Plugin 'w0rp/ale'
+Plugin 'dense-analysis/ale'
 
 " [11] Move code
 Plugin 'tpope/vim-unimpaired'
 
 " [12] Auto close brackets, parenthesis, etc
 Plugin 'jiangmiao/auto-pairs'
+
+" [13] Format php code
+Plugin 'stephpy/vim-php-cs-fixer'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -117,6 +121,7 @@ silent! colorscheme blanco
 
 " [8]
 " Set ultisnips triggers
+let g:UltiSnipsUsePythonVersion = 3
 let g:UltiSnipsSnippetsDir='~/.vim/ultisnips-snippets'   " Custom snippets dir
 let g:UltiSnipsSnippetDirectories=['ultisnips-snippets'] " Custom snippets dir
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -141,3 +146,8 @@ nmap <C-j> ]e
 " Move multiple lines selected
 vmap <C-k> [egv
 vmap <C-j> ]egv
+
+" [12]
+" Run php-cs-fixer on save
+autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
+
