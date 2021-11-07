@@ -44,6 +44,7 @@ Plugin 'gko/vim-coloresque'
 Plugin 'hashivim/vim-vagrant'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'jwalton512/vim-blade'
 
 " [5] search filesystem with ctrl+p (this fork replaces the old unmaintained project)
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -121,7 +122,6 @@ silent! colorscheme blanco
 
 " [8]
 " Set ultisnips triggers
-let g:UltiSnipsUsePythonVersion = 3
 let g:UltiSnipsSnippetsDir='~/.vim/ultisnips-snippets'   " Custom snippets dir
 let g:UltiSnipsSnippetDirectories=['ultisnips-snippets'] " Custom snippets dir
 let g:UltiSnipsExpandTrigger="<tab>"
