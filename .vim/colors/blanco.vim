@@ -33,36 +33,36 @@ hi IncSearch    guifg=#708090   guibg=#f0e68c
 hi Pmenu        guifg=#ffffff   guibg=#cb2f27
 hi SignColumn   guibg=#1b5c8a
 hi CursorLine   guibg=#eff2f4
-hi LineNr       guifg=#765e7c   guibg=#f4f4f4 
+hi LineNr       guifg=#765e7c   guibg=#f4f4f4
 hi MatchParen   guibg=#cddae5
 
 " Specials
-hi Todo         guifg=#e50808   guibg=#dbf3cd   
-hi Title        guifg=#000000   
+hi Todo         guifg=#e50808   guibg=#dbf3cd
+hi Title        guifg=#000000
 hi Special      guifg=#fd8900
 
 " Syntax Elements
 hi String       guifg=#0086d2
 hi Constant     guifg=#0086d2
-hi Number       guifg=#0086f7                   
+hi Number       guifg=#0086f7
 hi Statement    guifg=#a112b7
-hi Function     guifg=#CC1268                   
-hi PreProc      guifg=#CC1268                   
+hi Function     guifg=#CC1268
+hi PreProc      guifg=#CC1268
 hi Comment      guifg=#857C87   gui=italic
 hi Type         guifg=#df5f5f   gui=NONE   ctermfg=167  cterm=NONE
 hi Error        guifg=#ffffff   guibg=#d40000
-hi Identifier   guifg=#CC1268                   
+hi Identifier   guifg=#CC1268
 hi Label        guifg=#9E4770
 
-" PHP 
-hi phpStorageClass  guifg=#EA6B1C 
+" PHP
+hi phpStorageClass  guifg=#EA6B1C
 hi phpIdentifier    guifg=#437F97
 hi phpStructure     guifg=#BA308E
 
 " HTML
-hi htmlTag      guifg=#0a2775 
-hi htmlTagArg   guifg=#0a2775 
-hi htmlTagName  guifg=#0a2775 
+hi htmlTag      guifg=#0a2775
+hi htmlTagArg   guifg=#0a2775
+hi htmlTagName  guifg=#0a2775
 
 " CSS
 hi cssIdentifier guifg=#0a2775
@@ -73,3 +73,10 @@ hi jsFuncParens guifg=#fd8900
 hi jsParens guifg=#fd8900
 hi jsArrowFuncArgs guifg=#642591
 hi jsObjectProp guifg=#3353aa
+
+
+" GitGutter - Left bar git diff https://github.com/airblade/vim-gitgutter
+hi SignColumn guibg=#f4f4f4
+hi GitGutterAdd    guifg=#009900 ctermfg=2
+hi GitGutterChange guifg=#bbbb00 ctermfg=3
+hi GitGutterDelete guifg=#ff2222 ctermfg=1

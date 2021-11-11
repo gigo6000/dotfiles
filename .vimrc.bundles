@@ -27,6 +27,9 @@ Plugin 'VundleVim/Vundle.vim'
 
 " [1] File tree viewer
 Plugin 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plugin 'ryanoasis/vim-devicons'
+Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plugin 'airblade/vim-gitgutter'
 
 " [2] Twig syntax
 Plugin 'lepture/vim-jinja'
@@ -112,12 +115,16 @@ map <silent> <C-n> :NERDTreeToggle<cr>
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") &&
 " b:NERDTree.isTabTree()) | q | endif
 
+" Nerd Font is needed to show icons on NERDTree, get fonts from here: https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Meslo/S
+" and update ~/.gvimrc
+
+let g:NERDTreeIgnore = ['^node_modules$']
+
 " [2]
 au BufNewFile,BufRead *.twig set ft=jinja "Syntax highlight twig files
 
 " [4]
 silent! colorscheme blanco
-" set guifont=Menlo\ Regular:h16
 " Override cursor bar color (light gray background)
 "hi CursorLine cterm=NONE ctermbg=white
 
