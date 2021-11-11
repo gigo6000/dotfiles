@@ -88,6 +88,7 @@ Plugin 'jiangmiao/auto-pairs'
 
 " [13] Format php code
 Plugin 'stephpy/vim-php-cs-fixer'
+Plugin 'arnaud-lb/vim-php-namespace'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -147,7 +148,17 @@ nmap <C-j> ]e
 vmap <C-k> [egv
 vmap <C-j> ]egv
 
-" [12]
+" [13]
 " Run php-cs-fixer on save
 autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
+
+" Insert use statement: hitting \u in normal or insert mode will import the class or function under the cursor.
+" brew install ctags
+" Run this to genereate ctags file: ctags -R --PHP-kinds=cfi --exclude=*.js --exclude=vendor --exclude=node_modules --exclude=*.sql
+function! IPhpInsertUse()
+    call PhpInsertUse()
+    call feedkeys('a',  'n')
+endfunction
+autocmd FileType php inoremap <Leader>u <Esc>:call IPhpInsertUse()<CR>
+autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
 
