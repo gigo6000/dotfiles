@@ -23,7 +23,7 @@ This are my dotfiles. I use mac and I mainly do PHP/Javascript development on Ma
 -   Color Schemes: Tons of color schemes provided by `flazz/vim-colorschemes`, also my custom theme called `blanco`.
 -   Fuzzy Search Files: Type partial filenames and/or paths to quickly find files in your project.
 -   File System Explorer: Browse and view the files and folders in your project.
--   Linting and LSP: Get warnings in the code to prevent bugs. Rename functions/methods across multiple files.
+-   Linting and LSP: Get warnings in the code to prevent bugs. Rename functions/methods across multiple files (Intelephense license required: https://intelephense.com/).
 
 ## Install
 
