@@ -30,7 +30,7 @@ hi StatusLineNC guifg=#9bd4a9   guibg=#51b069
 hi VertSplit    guifg=#3687a2   guibg=#3687a2
 hi Folded       guifg=#3c78a2   guibg=#c3daea
 hi IncSearch    guifg=#708090   guibg=#f0e68c
-hi Pmenu        guifg=#ffffff   guibg=#cb2f27
+hi PMenu        guibg=#d0d0d0   guifg=#444444
 hi SignColumn   guibg=#1b5c8a
 hi CursorLine   guibg=#eff2f4
 hi LineNr       guifg=#765e7c   guibg=#f4f4f4
@@ -53,6 +53,7 @@ hi Type         guifg=#df5f5f   gui=NONE   ctermfg=167  cterm=NONE
 hi Error        guifg=#ffffff   guibg=#d40000
 hi Identifier   guifg=#CC1268
 hi Label        guifg=#9E4770
+hi Conceal      gui=undercurl guisp=Blue guibg=#ffffff guifg=NONE
 
 " PHP
 hi phpStorageClass  guifg=#EA6B1C
@@ -69,14 +70,13 @@ hi cssIdentifier guifg=#0a2775
 hi cssClassName  guifg=#0a2775
 
 " Javascript
-hi jsFuncParens guifg=#fd8900
-hi jsParens guifg=#fd8900
+hi jsFuncParens    guifg=#fd8900
+hi jsParens        guifg=#fd8900
 hi jsArrowFuncArgs guifg=#642591
-hi jsObjectProp guifg=#3353aa
-
+hi jsObjectProp    guifg=#3353aa
 
 " GitGutter - Left bar git diff https://github.com/airblade/vim-gitgutter
-hi SignColumn guibg=#f4f4f4
+hi SignColumn      guibg=#f4f4f4
 hi GitGutterAdd    guifg=#009900 ctermfg=2
 hi GitGutterChange guifg=#bbbb00 ctermfg=3
 hi GitGutterDelete guifg=#ff2222 ctermfg=1
