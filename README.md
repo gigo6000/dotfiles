@@ -14,6 +14,7 @@ This are my dotfiles. I use mac and I mainly do PHP/Javascript development on Ma
 -   GIT
 -   Bash
 -   MacVIM works best for the color schemes
+-   Yarn (to compile some plugins)
 
 ## Features
 
@@ -22,6 +23,7 @@ This are my dotfiles. I use mac and I mainly do PHP/Javascript development on Ma
 -   Color Schemes: Tons of color schemes provided by `flazz/vim-colorschemes`, also my custom theme called `blanco`.
 -   Fuzzy Search Files: Type partial filenames and/or paths to quickly find files in your project.
 -   File System Explorer: Browse and view the files and folders in your project.
+-   Linting and LSP: Get warnings in the code to prevent bugs. Rename functions/methods across multiple files.
 
 ## Install
 
@@ -35,3 +37,5 @@ Run this command to set up VIM:
 
 -   `Ctrl + p` = To start fuzzy searching a file
 -   `Ctrl + n` = To open file system explorer
+-   `\rn` = To rename a function/method
+-   `\u` = Import use statament (PHP) for class under cursor
