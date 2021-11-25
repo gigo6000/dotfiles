@@ -87,6 +87,8 @@ Plugin 'jiangmiao/auto-pairs'
 " [13] Format php code
 Plugin 'stephpy/vim-php-cs-fixer'
 Plugin 'arnaud-lb/vim-php-namespace'
+" If you use ctags to make tags files of your source, it's nice to be able to re-run ctags on a source file when you save it.
+Plugin 'craigemery/vim-autotag'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
