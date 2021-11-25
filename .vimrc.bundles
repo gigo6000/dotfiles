@@ -164,6 +164,18 @@ autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.gra
 
 " [10]
 
+" Coc plugins that we add here will be automatically installed and updated by Coc.
+" If you add a new extension just open vim in a new window to install it
+" Alternately inside vim: :CocInstall coc-tsserver coc-html coc-css coc-json
+" coc-blade
+" More Extensions: https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#use-vims-plugin-manager-for-coc-extension
+let g:coc_global_extensions = [
+  \ 'coc-tsserver',
+  \ 'coc-html',
+  \ 'coc-css',
+  \ 'coc-json',
+  \ 'coc-blade',
+  \ ]
 " https://github.com/neoclide/coc.nvim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""" FROM COC README  """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

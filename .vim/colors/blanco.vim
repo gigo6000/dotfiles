@@ -30,7 +30,7 @@ hi StatusLineNC guifg=#9bd4a9   guibg=#51b069
 hi VertSplit    guifg=#3687a2   guibg=#3687a2
 hi Folded       guifg=#3c78a2   guibg=#c3daea
 hi IncSearch    guifg=#708090   guibg=#f0e68c
-hi PMenu        guibg=#d0d0d0   guifg=#444444
+hi PMenu        guibg=#29292b   guifg=#f4f4f4
 hi SignColumn   guibg=#1b5c8a
 hi CursorLine   guibg=#eff2f4
 hi LineNr       guifg=#765e7c   guibg=#f4f4f4
