@@ -54,6 +54,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'jwalton512/vim-blade'
 Plugin 'dylnmc/synstack.vim'
 Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'morhetz/gruvbox'
 
 " [5] Search filesystem with ctrl+p (this fork replaces the old unmaintained project)
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -116,6 +117,8 @@ map <silent> <C-n> :NERDTreeToggle<cr>
 " and update ~/.gvimrc
 
 let g:NERDTreeIgnore = ['^node_modules$']
+" Increase default width
+let g:NERDTreeWinSize=60
 
 " [2]
 au BufNewFile,BufRead *.twig set ft=jinja "Syntax highlight twig files
@@ -162,6 +165,7 @@ let g:prettier#config#tab_width = 4
 "es5" - Trailing commas where valid in ES5 (objects, arrays, etc.)
 "all" - Trailing commas wherever possible (including function arguments). This requires node 8 or a transform.
 let g:prettier#config#trailing_comma = 'es5'
+let g:prettier#config#single_quote = 'true'
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md Prettier
 
 " [10]
@@ -377,3 +381,5 @@ endfunction
 autocmd FileType php inoremap <Leader>u <Esc>:call IPhpInsertUse()<CR>
 autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
 
+" Fix bug: https://github.com/craigemery/vim-autotag/issues/34
+let g:autotagStartMethod='fork'

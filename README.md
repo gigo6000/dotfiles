@@ -16,6 +16,8 @@ This are my dotfiles. I use mac and I mainly do PHP/Javascript development on Ma
 -   MacVIM works best for the color schemes
 -   Yarn (to compile some plugins)
 -   Brew (to install some packages like ctags)
+-   Prettier
+-   php-cs-fixer
 
 ## Features
 
