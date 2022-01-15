@@ -1,109 +1,87 @@
-"
+" Brief help (https://github.com/junegunn/vim-plug)
 " :so % to refresh .vimrc after making changes
-" :PluginInstall to install new stuff
-" :PluginUpdate to update to latest versions
-" :PluginClean to remove deleted plugins
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+" :PlugInstall to install new stuff
+" :PlugUpdate to update to latest versions. You can force post-update hooks with :PlugUpdate!
+" :PlugClean to remove deleted plugins
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+" set the runtime path to include vim-plug and initialize
+call plug#begin('~/.vim/plugged')
 
 " Add plugins below
 
 " [1] File tree viewer
-Plugin 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " Icons in Nerdtree
-Plugin 'ryanoasis/vim-devicons'
-Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'ryanoasis/vim-devicons'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 " Show git status in left bar
-Plugin 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 " Show git status in Nerdtree
-Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " [2] Twig syntax
-Plugin 'lepture/vim-jinja'
+Plug 'lepture/vim-jinja'
 
 " [3] easily surround things... Nice intro video: https://www.youtube.com/watch?v=5HF4jSyPpvs
-Plugin 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 
 " [4] Themes / Prettify stuff
-Plugin 'tpope/vim-fugitive'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'felixhummel/setcolors.vim'
-Plugin 'gko/vim-coloresque'
-Plugin 'hashivim/vim-vagrant'
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-Plugin 'jwalton512/vim-blade'
-Plugin 'dylnmc/synstack.vim'
-Plugin 'NLKNguyen/papercolor-theme'
-Plugin 'morhetz/gruvbox'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'flazz/vim-colorschemes'
+Plug 'felixhummel/setcolors.vim'
+Plug 'gko/vim-coloresque'
+Plug 'hashivim/vim-vagrant'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'jwalton512/vim-blade'
+Plug 'dylnmc/synstack.vim'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'morhetz/gruvbox'
 
 " [5] Search filesystem with ctrl+p (this fork replaces the old unmaintained project)
-Plugin 'ctrlpvim/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 
 " [6]
 
 " [7] Comment out code
-Plugin 'vim-scripts/tComment' "Comment easily with gcc
+Plug 'vim-scripts/tComment' "Comment easily with gcc
 
 " [8] Snippets
-Plugin 'ervandew/supertab'
-Plugin 'SirVer/ultisnips'
-Plugin 'justinj/vim-react-snippets'
+Plug 'ervandew/supertab'
+Plug 'SirVer/ultisnips'
+Plug 'justinj/vim-react-snippets'
 
 " [9] Pretty format for our code
-Plugin 'prettier/vim-prettier'
+Plug 'prettier/vim-prettier'
 
 " [10] Linting and LSP
-Plugin 'dense-analysis/ale'
-Plugin 'neoclide/coc.nvim' " Also run this to compile: cd ~/.vim/bundle/coc.nvim/ && yarn install && yarn build
-
-" extension for intelephense (PHP LSP)
-Plugin 'yaegassy/coc-intelephense' " Also run this to compile: cd ~/.vim/bundle/coc-intelephense && yarn install --frozen-lockfile
+Plug 'dense-analysis/ale'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " [11] Move code
-Plugin 'tpope/vim-unimpaired'
+Plug 'tpope/vim-unimpaired'
 
 " [12] Auto close brackets, parenthesis, etc
-Plugin 'jiangmiao/auto-pairs'
+Plug 'jiangmiao/auto-pairs'
 
 " [13] Format php code
-Plugin 'stephpy/vim-php-cs-fixer'
-Plugin 'arnaud-lb/vim-php-namespace'
+Plug 'stephpy/vim-php-cs-fixer'
+Plug 'arnaud-lb/vim-php-namespace'
 " If you use ctags to make tags files of your source, it's nice to be able to re-run ctags on a source file when you save it.
-Plugin 'craigemery/vim-autotag'
+Plug 'craigemery/vim-autotag'
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
+call plug#end()            " required
+
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
 """" PLUGIN RELATED TWEAKS
@@ -165,7 +143,6 @@ let g:prettier#config#tab_width = 4
 "es5" - Trailing commas where valid in ES5 (objects, arrays, etc.)
 "all" - Trailing commas wherever possible (including function arguments). This requires node 8 or a transform.
 let g:prettier#config#trailing_comma = 'es5'
-let g:prettier#config#single_quote = 'true'
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md Prettier
 
 " [10]
@@ -181,6 +158,7 @@ let g:coc_global_extensions = [
   \ 'coc-css',
   \ 'coc-json',
   \ 'coc-blade',
+  \ '@yaegassy/coc-intelephense',
   \ ]
 " https://github.com/neoclide/coc.nvim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
