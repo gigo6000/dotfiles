@@ -57,7 +57,7 @@ Plug 'SirVer/ultisnips'
 Plug 'justinj/vim-react-snippets'
 
 " [9] Pretty format for our code
-Plug 'prettier/vim-prettier'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 
 " [10] Linting and LSP
 Plug 'dense-analysis/ale'
