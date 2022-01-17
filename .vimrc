@@ -156,3 +156,6 @@ autocmd BufWritePre * :%s/\s\+$//e
 " Load .vimrc files per project
 set exrc
 set secure
+
+" Always show the sign column (the column at the left of the numbers)
+set signcolumn=yes
