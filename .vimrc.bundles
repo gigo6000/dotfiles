@@ -60,7 +60,6 @@ Plug 'justinj/vim-react-snippets'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 
 " [10] Linting and LSP
-Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " [11] Move code

@@ -31,7 +31,7 @@ hi VertSplit    guifg=#3687a2   guibg=#3687a2
 hi Folded       guifg=#3c78a2   guibg=#c3daea
 hi IncSearch    guifg=#708090   guibg=#f0e68c
 hi PMenu        guibg=#29292b   guifg=#f4f4f4
-hi SignColumn   guibg=#1b5c8a
+hi SignColumn   guibg=#302e2e   guifg=#302e2e
 hi CursorLine   guibg=#eff2f4
 hi LineNr       guifg=#765e7c   guibg=#f4f4f4
 hi MatchParen   guibg=#cddae5
@@ -76,7 +76,6 @@ hi jsArrowFuncArgs guifg=#642591
 hi jsObjectProp    guifg=#3353aa
 
 " GitGutter - Left bar git diff https://github.com/airblade/vim-gitgutter
-hi SignColumn      guibg=#f4f4f4
-hi GitGutterAdd    guifg=#009900 ctermfg=2
-hi GitGutterChange guifg=#bbbb00 ctermfg=3
-hi GitGutterDelete guifg=#ff2222 ctermfg=1
+hi GitGutterAdd    guifg=#A2F900 ctermfg=2 guibg=#302e2e
+hi GitGutterChange guifg=#bbbb00 ctermfg=3 guibg=#302e2e
+hi GitGutterDelete guifg=#ff2222 ctermfg=1 guibg=#302e2e
