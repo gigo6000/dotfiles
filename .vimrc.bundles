@@ -70,9 +70,6 @@ Plug 'jiangmiao/auto-pairs'
 
 " [13] Format php code
 Plug 'stephpy/vim-php-cs-fixer'
-Plug 'arnaud-lb/vim-php-namespace'
-" If you use ctags to make tags files of your source, it's nice to be able to re-run ctags on a source file when you save it.
-Plug 'craigemery/vim-autotag'
 
 " All of your Plugins must be added before the following line
 call plug#end()            " required
@@ -357,6 +354,3 @@ function! IPhpInsertUse()
 endfunction
 autocmd FileType php inoremap <Leader>u <Esc>:call IPhpInsertUse()<CR>
 autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
-
-" Fix bug: https://github.com/craigemery/vim-autotag/issues/34
-let g:autotagStartMethod='fork'

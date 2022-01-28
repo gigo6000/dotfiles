@@ -15,7 +15,7 @@ This are my dotfiles. I use mac and I mainly do PHP/Javascript development on Ma
 -   Bash
 -   MacVIM works best for the color schemes
 -   Yarn (to compile some plugins)
--   Brew (to install some packages like ctags)
+-   Brew (to install some packages)
 -   Prettier
 -   php-cs-fixer
 
@@ -41,4 +41,3 @@ Run this command to set up VIM:
 -   `Ctrl + p` = To start fuzzy searching a file
 -   `Ctrl + n` = To open file system explorer
 -   `\rn` = To rename a function/method
--   `\u` = Import use statament (PHP) for class under cursor
