@@ -55,6 +55,7 @@ Plug 'vim-scripts/tComment' "Comment easily with gcc
 Plug 'ervandew/supertab'
 Plug 'SirVer/ultisnips'
 Plug 'justinj/vim-react-snippets'
+Plug 'mattn/emmet-vim'
 
 " [9] Pretty format for our code
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
@@ -70,6 +71,7 @@ Plug 'jiangmiao/auto-pairs'
 
 " [13] Format php code
 Plug 'stephpy/vim-php-cs-fixer'
+Plug 'editorconfig/editorconfig-vim'
 
 " All of your Plugins must be added before the following line
 call plug#end()            " required
@@ -131,6 +133,9 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsEditSplit="vertical"
 
+" Emmet leader key map
+let g:user_emmet_leader_key=','
+
 " [9]
 " Enable vim-prettier to run in files without requiring the "@format" doc tag
 let g:prettier#autoformat = 0
@@ -139,7 +144,7 @@ let g:prettier#config#tab_width = 4
 "es5" - Trailing commas where valid in ES5 (objects, arrays, etc.)
 "all" - Trailing commas wherever possible (including function arguments). This requires node 8 or a transform.
 let g:prettier#config#trailing_comma = 'es5'
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md Prettier
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.html Prettier
 
 " [10]
 

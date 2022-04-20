@@ -20,6 +20,15 @@ var ${2} = function() {
 }
 endsnippet
 
+
+snippet try "try() catch()" b
+try {
+    ${1}
+} catch(error) {
+    console.log('error:', error);
+}
+endsnippet
+
 snippet import "Import module" b
 import ${1} from '${2}';
 endsnippet
@@ -101,8 +110,9 @@ snippet rt "Create tag" b
 </$1>
 endsnippet
 
-snippet useEffect "Create useEffect hook" b
+snippet usef "Create useEffect hook" b
 useEffect(() => {
-
-});
+  ${1}
+}, [${2}]);
 endsnippet
+
