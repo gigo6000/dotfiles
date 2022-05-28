@@ -3,7 +3,7 @@
 #**********************************************************************************************/
 # General
 #**********************************************************************************************/
-snippet con "console.log(...)" b
+snippet console "console.log(...)" b
 console.log('${1:`!p snip.rv = re.sub(r';\s*$', '', snip.v.text)`}');$0
 endsnippet
 
@@ -11,7 +11,7 @@ snippet cons "console.log('var', var)" b
 console.log('${1:`!p snip.rv = re.sub(r';\s*$', '', snip.v.text)`}:', $1);$0
 endsnippet
 
-snippet func "Function" b
+snippet function "Function" b
 /**
 * ${1}
 */
@@ -70,49 +70,61 @@ endsnippet
 # React
 #**********************************************************************************************/
 # General
-snippet rdiv "Create new React div" b
+snippet div "Create new React div" b
 <div className="${1}">
-	$0
+  $0
 </div>
 endsnippet
 
 # Hooks
-snippet rcomponent "Create new hook component" b
-import React, {useState} from 'react';
+snippet component "Create new hook component" b
+import React from 'react';
 
-function ${1}() {
-	$0
+export default function ${1}() {
+  $0
 
-	return ();
+  return ();
 }
-
-export default $1;
 endsnippet
 
-snippet rstate "Create new state variable" b
+snippet useState "Create new state variable" b
 const [${1}, set${1/\w+\s*/\u$0/}] = useState($0);
 endsnippet
 
-snippet rform "Create form tag" b
+snippet form "Create form tag" b
 <form onSubmit={${1:handleSubmit}}>
-	$0
+  $0
 </form>
 endsnippet
 
-snippet rimg "Create image tag" b
+snippet img "Create image tag" b
 <img alt={${1}} src={${2}} />
 $0
 endsnippet
 
-snippet rt "Create tag" b
+snippet tag "Create tag" b
 <${1} className="${2}">
-	$0
+  $0
 </$1>
 endsnippet
 
-snippet usef "Create useEffect hook" b
+snippet useEffect "Create useEffect hook" b
 useEffect(() => {
   ${1}
 }, [${2}]);
 endsnippet
 
+snippet table "Create table html/tags" b
+<table>
+   <thead>
+       <tr>
+           <th>${1}</th>
+       </tr>
+   </thead>
+   <tbody>
+       <tr>
+           <td>${2}</td>
+       </tr>
+   </tbody>
+</table>
+endsnippet

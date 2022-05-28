@@ -42,6 +42,7 @@ Plug 'jwalton512/vim-blade'
 Plug 'dylnmc/synstack.vim'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'morhetz/gruvbox'
+Plug 'jparise/vim-graphql'
 
 " [5] Search filesystem with ctrl+p (this fork replaces the old unmaintained project)
 Plug 'ctrlpvim/ctrlp.vim'
