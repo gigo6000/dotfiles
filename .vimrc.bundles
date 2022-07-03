@@ -160,6 +160,10 @@ let g:coc_global_extensions = [
   \ 'coc-css',
   \ 'coc-json',
   \ 'coc-blade',
+  \ 'coc-sql',
+  \ 'coc-docker',
+  \ 'coc-emmet',
+  \ '@yaegassy/coc-tailwindcss3',
   \ '@yaegassy/coc-intelephense',
   \ ]
 " https://github.com/neoclide/coc.nvim
